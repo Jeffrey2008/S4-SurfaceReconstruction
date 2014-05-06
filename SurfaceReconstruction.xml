@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Surface Models</category>
+  <title>SurfaceReconstruction</title>
+  <description><![CDATA[Surface reconstruction from point sets files ]]></description>
+  <version>0.0.1</version>
+  <documentation-url>http://www.slicer.org/slicerWiki/index.php/Documentation/4.3/Modules/SurfaceReconstruction</documentation-url>
+  <license>Slicer</license>
+  <contributor>Chenxi-Zhang David-Doria Arnaud-Gelas Michael-Kazhdan Matthew-Bolitho Hugues-Hoppe Jean-Christophe Fillion-Robin</contributor>
+  <acknowledgements>This work was partially funded </acknowledgements>
+  <parameters>
+    <label>IO</label>
+    <description><![CDATA[Input/output parameters]]></description>
+    
+     <image>
+      <name>inputVolume</name>
+      <label>Input Volume</label>
+      <channel>input</channel>
+      <index>0</index>
+      <description><![CDATA[Input volume]]></description>
+    </image>
+    
+    
+     <geometry>
+      <name>outputFile</name>
+      <label>Output Polydata</label>
+      <channel>output</channel>
+      <index>1</index>
+      <description><![CDATA[Output Polydata]]></description>
+     </geometry>
+    
+    <geometry>
+      <name>outputSurfaceFile</name>
+      <label>Output Surface</label>
+      <channel>output</channel>
+      <index>2</index>
+      <description><![CDATA[Output Surface]]></description>
+     </geometry>
+ 
+  </parameters>
+  
+  <parameters>
+    <label>Surface Reconstruction Parameters</label>
+    <description>Parameters used for Surface Reconstruction.</description>
+    <integer>
+      <name>depth</name>
+      <label>Depth</label>
+      <flag>-d</flag>
+      <longflag>--depth</longflag>
+      <description>the Maximum depth of the tree</description>
+      <default>8</default>
+      <constraints>
+        <minimum>4</minimum>
+        <maximum>20</maximum>
+       </constraints>
+    </integer>
+	
+	<float>
+      <name>scale</name>
+      <label>Scale</label>
+      <flag>-s</flag>
+      <longflag>--scale</longflag>
+      <description>the ratio </description>
+      <default>1.25</default>
+      <constraints>
+        <minimum>1.0</minimum>
+        <maximum>3.0</maximum>
+       </constraints>
+    </float>
+	
+	<integer>
+      <name>solverDivide</name>
+      <label>SolverDivide</label>
+      <flag>-v</flag>
+      <longflag>--solverDivide</longflag>
+      <description>Solver subdivision depth</description>
+      <default>8</default>
+    </integer>
+	
+    <integer>
+      <name>isoDivide</name>
+      <label>IsoDivide</label>
+      <flag>-i</flag>
+      <longflag>--isoDivide</longflag>
+      <description>Iso-surface extraction subdivision depth</description>
+      <default>8</default>
+      <constraints>
+        <minimum>4</minimum>
+        <maximum>20</maximum>
+       </constraints>
+    </integer>
+	
+    <float>
+      <name>samplesPerNode</name>
+      <label>SamplesPerNode</label>
+      <flag>-n</flag>
+      <longflag>--SamplesPerNode</longflag>
+      <description>Minimum number of samples </description>
+      <default>1.0</default>
+      <constraints>
+        <minimum>1.0</minimum>
+        <maximum>20.0</maximum>
+       </constraints>
+    </float>
+  </parameters>
+</executable>
