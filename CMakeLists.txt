@@ -4,13 +4,11 @@ cmake_minimum_required(VERSION 2.8.9)
 #-----------------------------------------------------------------------------
 if(NOT Slicer_SOURCE_DIR)
 set(EXTENSION_NAME SurfaceReconstruction)
-set(EXTENSION_HOMEPAGE "http://www.slicer.org/slicerWiki/index.php/Documentation/4.3/Extensions/SurfaceReconstruction")
-set(EXTENSION_CATEGORY "Surface Model")
+set(EXTENSION_HOMEPAGE "http://wiki.slicer.org/slicerWiki/index.php/Documentation/Nightly/Extensions/SurfaceReconstruction")
+set(EXTENSION_CATEGORY "Surface Models")
 set(EXTENSION_CONTRIBUTORS "Chenxi-Zhang David-Doria Arnaud-Gelas Michael-Kazhdan Matthew-Bolitho Hugues-Hoppe Jean-Christophe Fillion-Robin (Kitware)")
 set(EXTENSION_DESCRIPTION "This is an implementation of the Poisson surface reconstruction algorithm in the VTK framework")
-set(EXTENSION_ICONURL "http://viewvc.slicer.org/viewvc.cgi/Slicer4/trunk/Extensions/Testing/SurfaceReconstruction/SurfaceReconstruction.png?revision=21745&view=co")
-set(EXTENSION_SCREENSHOTURLS "http://wiki.slicer.org/slicerWiki/images/a/ab/Slicer-r19441-SurfaceReconstruction-screenshot.png http://wiki.slicer.org/slicerWiki/images/1/1e/Slicer-r19441-SurfaceReconstruction-screenshot-2.png")
-
+set(EXTENSION_ICONURL "http://wiki.slicer.org/slicerWiki/images/c/cf/SurfaceReconstruction.png")
 endif()
 
 #-----------------------------------------------------------------------------
