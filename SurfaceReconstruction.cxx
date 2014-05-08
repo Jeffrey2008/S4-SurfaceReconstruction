@@ -3,7 +3,7 @@
 //#include "itkSmoothingRecursiveGaussianImageFilter.h"
 
 #include "itkPluginUtilities.h"
-#include "SurfaceReconstructionCLP.h"
+
 //#include "CLIModuleTemplateCLP.h"
 
 //add 0814
